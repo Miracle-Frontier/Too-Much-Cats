@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7opt30ud67po"
-path="res://.godot/imported/background.png-d82bc24b46f3e91c5083f69589729798.ctex"
+uid="uid://bgx564wlo7h6f"
+path="res://.godot/imported/counter_conveyyor.png-3a69bd4f5566cff762fff5fbef11e823.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/background.png"
-dest_files=["res://.godot/imported/background.png-d82bc24b46f3e91c5083f69589729798.ctex"]
+source_file="res://scenes/counter/counter_conveyyor.png"
+dest_files=["res://.godot/imported/counter_conveyyor.png-3a69bd4f5566cff762fff5fbef11e823.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=4
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -25,10 +25,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

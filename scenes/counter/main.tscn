@@ -1,9 +1,39 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3pfpnw5jtvpd"]
+[gd_scene load_steps=15 format=3 uid="uid://b3pfpnw5jtvpd"]
 
 [ext_resource type="AudioStream" uid="uid://ttprlvbvabw3" path="res://scenes/counter/supermarket checkout counter sound effectcashier sound effects.mp3" id="1_8v44o"]
 [ext_resource type="Script" path="res://scenes/counter/main.gd" id="1_604fg"]
 [ext_resource type="Texture2D" uid="uid://cro708v2874bu" path="res://icon.svg" id="4_qunl0"]
 [ext_resource type="Texture2D" uid="uid://blkungo4qkr5q" path="res://scenes/counter/counter.png" id="4_wyptm"]
+[ext_resource type="Texture2D" uid="uid://c7opt30ud67po" path="res://scenes/counter/background.png" id="5_6wing"]
+[ext_resource type="Shader" path="res://scenes/counter/repeat_background.gdshader" id="6_0erll"]
+[ext_resource type="Texture2D" uid="uid://sjqcgso1mojr" path="res://scenes/counter/pattern.png" id="7_bvfra"]
+[ext_resource type="Texture2D" uid="uid://c78wprpadi187" path="res://scenes/counter/counter_background_w.png" id="8_na4n3"]
+[ext_resource type="Texture2D" uid="uid://c4f6wgoo0x7ua" path="res://scenes/counter/counter_background.png" id="9_mikyi"]
+[ext_resource type="Texture2D" uid="uid://bgx564wlo7h6f" path="res://scenes/counter/counter_conveyyor.png" id="10_gxc6t"]
+[ext_resource type="Texture2D" uid="uid://dkate0ohtc44t" path="res://scenes/counter/counter_limit.png" id="11_wi7gr"]
+[ext_resource type="Texture2D" uid="uid://13416bnsspw1" path="res://scenes/counter/border.png" id="12_1sesc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jwj8c"]
+shader = ExtResource("6_0erll")
+shader_parameter/speed = 0.22
+shader_parameter/size_scale = 12.645
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/pattern = ExtResource("7_bvfra")
+
+[sub_resource type="GDScript" id="GDScript_db3wh"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+var speed = 300.0
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	position.x += (speed * delta)
+"
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_604fg")
@@ -32,4 +62,38 @@ position = Vector2(0, 657)
 texture = ExtResource("4_qunl0")
 
 [node name="Counter" type="Sprite2D" parent="."]
+position = Vector2(3275, -858)
 texture = ExtResource("4_wyptm")
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Background2" type="Sprite2D" parent="."]
+texture = ExtResource("5_6wing")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_jwj8c")
+offset_left = -2097.0
+offset_top = -1.0
+offset_right = 909.0
+offset_bottom = 2970.0
+rotation = -0.750724
+
+[node name="CounterBackgroundW" type="Sprite2D" parent="."]
+position = Vector2(0, 27)
+texture = ExtResource("8_na4n3")
+
+[node name="CounterBackground" type="Sprite2D" parent="."]
+position = Vector2(0, 394)
+texture = ExtResource("9_mikyi")
+
+[node name="CounterConveyyor" type="Sprite2D" parent="."]
+position = Vector2(0, 382)
+texture = ExtResource("10_gxc6t")
+script = SubResource("GDScript_db3wh")
+
+[node name="CounterLimit" type="Sprite2D" parent="."]
+position = Vector2(-1087, 373)
+texture = ExtResource("11_wi7gr")
+
+[node name="Border" type="Sprite2D" parent="."]
+texture = ExtResource("12_1sesc")
