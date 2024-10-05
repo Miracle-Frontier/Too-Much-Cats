@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7opt30ud67po"
-path="res://.godot/imported/background.png-d82bc24b46f3e91c5083f69589729798.ctex"
+uid="uid://dkate0ohtc44t"
+path="res://.godot/imported/counter_limit.png-683e65d7b9490fec951a3aa0ac5b89ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/background.png"
-dest_files=["res://.godot/imported/background.png-d82bc24b46f3e91c5083f69589729798.ctex"]
+source_file="res://scenes/counter/counter_limit.png"
+dest_files=["res://.godot/imported/counter_limit.png-683e65d7b9490fec951a3aa0ac5b89ac.ctex"]
 
 [params]
 
