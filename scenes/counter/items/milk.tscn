@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://57j7cvl7qfx"]
+
+[ext_resource type="PackedScene" uid="uid://bmnvaj1b5irp7" path="res://scenes/counter/items/counter_item.tscn" id="1_smoav"]
+[ext_resource type="Texture2D" uid="uid://cyooqkot0xjkt" path="res://scenes/counter/items/milk.png" id="2_06p1j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8e4ec"]
+size = Vector2(482, 632.5)
+
+[node name="Milk" instance=ExtResource("1_smoav")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(19, -3.25)
+shape = SubResource("RectangleShape2D_8e4ec")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_06p1j")

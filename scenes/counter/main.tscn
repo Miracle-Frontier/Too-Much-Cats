@@ -1,17 +1,21 @@
-[gd_scene load_steps=17 format=3 uid="uid://b3pfpnw5jtvpd"]
+[gd_scene load_steps=21 format=3 uid="uid://b3pfpnw5jtvpd"]
 
-[ext_resource type="AudioStream" uid="uid://ttprlvbvabw3" path="res://scenes/counter/supermarket checkout counter sound effectcashier sound effects.mp3" id="1_8v44o"]
+[ext_resource type="AudioStream" uid="uid://ttprlvbvabw3" path="res://scenes/counter/assets/supermarket checkout counter sound effectcashier sound effects.mp3" id="1_8v44o"]
 [ext_resource type="Script" path="res://scenes/counter/main.gd" id="1_604fg"]
-[ext_resource type="Texture2D" uid="uid://blkungo4qkr5q" path="res://scenes/counter/counter.png" id="4_wyptm"]
-[ext_resource type="Texture2D" uid="uid://c7opt30ud67po" path="res://scenes/counter/background.png" id="5_6wing"]
+[ext_resource type="PackedScene" uid="uid://8gv1k1mihjf5" path="res://scenes/counter/items/donut.tscn" id="2_1riex"]
+[ext_resource type="PackedScene" uid="uid://57j7cvl7qfx" path="res://scenes/counter/items/milk.tscn" id="3_cpjft"]
+[ext_resource type="PackedScene" uid="uid://dwtgqdrx7ujf3" path="res://scenes/counter/items/pizza.tscn" id="4_nbb62"]
+[ext_resource type="Texture2D" uid="uid://blkungo4qkr5q" path="res://scenes/counter/assets/counter.png" id="4_wyptm"]
+[ext_resource type="Texture2D" uid="uid://c7opt30ud67po" path="res://scenes/counter/assets/background.png" id="5_6wing"]
 [ext_resource type="Shader" path="res://scenes/counter/repeat_background.gdshader" id="6_0erll"]
-[ext_resource type="Texture2D" uid="uid://sjqcgso1mojr" path="res://scenes/counter/pattern.png" id="7_bvfra"]
-[ext_resource type="Texture2D" uid="uid://b30yw6ath6ily" path="res://scenes/counter/ghost.png" id="7_xs5mj"]
-[ext_resource type="Texture2D" uid="uid://c78wprpadi187" path="res://scenes/counter/counter_background_w.png" id="8_na4n3"]
-[ext_resource type="Texture2D" uid="uid://c4f6wgoo0x7ua" path="res://scenes/counter/counter_background.png" id="9_mikyi"]
-[ext_resource type="Texture2D" uid="uid://bgx564wlo7h6f" path="res://scenes/counter/counter_conveyyor.png" id="10_gxc6t"]
-[ext_resource type="Texture2D" uid="uid://dkate0ohtc44t" path="res://scenes/counter/counter_limit.png" id="11_wi7gr"]
-[ext_resource type="Texture2D" uid="uid://13416bnsspw1" path="res://scenes/counter/border.png" id="12_1sesc"]
+[ext_resource type="Texture2D" uid="uid://sjqcgso1mojr" path="res://scenes/counter/assets/pattern.png" id="7_bvfra"]
+[ext_resource type="Texture2D" uid="uid://b30yw6ath6ily" path="res://scenes/counter/assets/ghost.png" id="7_xs5mj"]
+[ext_resource type="Texture2D" uid="uid://c78wprpadi187" path="res://scenes/counter/assets/counter_background_w.png" id="8_na4n3"]
+[ext_resource type="Texture2D" uid="uid://c4f6wgoo0x7ua" path="res://scenes/counter/assets/counter_background.png" id="9_mikyi"]
+[ext_resource type="Texture2D" uid="uid://dqa2o84b24dq" path="res://scenes/counter/assets/shelf.png" id="10_501hu"]
+[ext_resource type="Texture2D" uid="uid://bgx564wlo7h6f" path="res://scenes/counter/assets/counter_conveyyor.png" id="10_gxc6t"]
+[ext_resource type="Texture2D" uid="uid://dkate0ohtc44t" path="res://scenes/counter/assets/counter_limit.png" id="11_wi7gr"]
+[ext_resource type="Texture2D" uid="uid://13416bnsspw1" path="res://scenes/counter/assets/border.png" id="12_1sesc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jwj8c"]
 shader = ExtResource("6_0erll")
@@ -61,6 +65,7 @@ _data = {
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_604fg")
+scene_list = Array[PackedScene]([ExtResource("4_nbb62"), ExtResource("3_cpjft"), ExtResource("2_1riex")])
 
 [node name="SupermarketCheckoutCounterSoundEffectcashierSoundEffects" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(370, 432)
@@ -71,7 +76,7 @@ autoplay = true
 metadata/_edit_lock_ = true
 
 [node name="Counter" type="Sprite2D" parent="."]
-position = Vector2(3333, -966)
+position = Vector2(2912, -1871)
 texture = ExtResource("4_wyptm")
 
 [node name="Background2" type="Sprite2D" parent="."]
@@ -87,7 +92,13 @@ offset_right = 1295.0
 offset_bottom = 20.0
 metadata/_edit_lock_ = true
 
+[node name="Shelf" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(911, -246)
+texture = ExtResource("10_501hu")
+
 [node name="Ghost" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, -387)
 texture = ExtResource("7_xs5mj")
 
@@ -122,6 +133,8 @@ metadata/_edit_lock_ = true
 position = Vector2(-1087, 373)
 texture = ExtResource("11_wi7gr")
 metadata/_edit_lock_ = true
+
+[node name="Items" type="Node2D" parent="."]
 
 [node name="Border" type="Sprite2D" parent="."]
 texture = ExtResource("12_1sesc")
@@ -158,3 +171,6 @@ offset_right = 1280.0
 offset_bottom = 2160.0
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
+
+[node name="Spawnpoint" type="Marker2D" parent="."]
+position = Vector2(-119, 339)

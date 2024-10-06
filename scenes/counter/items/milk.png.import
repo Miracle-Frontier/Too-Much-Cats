@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blkungo4qkr5q"
-path="res://.godot/imported/counter.png-3e3dbf1851fb7f0d4f7f837399060a18.ctex"
+uid="uid://cyooqkot0xjkt"
+path="res://.godot/imported/milk.png-db9f2153cbe2661e4ff30a0bba1851b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/counter.png"
-dest_files=["res://.godot/imported/counter.png-3e3dbf1851fb7f0d4f7f837399060a18.ctex"]
+source_file="res://scenes/counter/items/milk.png"
+dest_files=["res://.godot/imported/milk.png-db9f2153cbe2661e4ff30a0bba1851b9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkate0ohtc44t"
-path="res://.godot/imported/counter_limit.png-683e65d7b9490fec951a3aa0ac5b89ac.ctex"
+uid="uid://dfxxajgrcd5ad"
+path="res://.godot/imported/donut.png-1e7256d0fc255028339cf718ae5a8d0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/counter_limit.png"
-dest_files=["res://.godot/imported/counter_limit.png-683e65d7b9490fec951a3aa0ac5b89ac.ctex"]
+source_file="res://scenes/counter/items/donut.png"
+dest_files=["res://.godot/imported/donut.png-1e7256d0fc255028339cf718ae5a8d0c.ctex"]
 
 [params]
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmnvaj1b5irp7"]
+
+[ext_resource type="Texture2D" uid="uid://dfxxajgrcd5ad" path="res://scenes/counter/items/donut.png" id="1_5bdbu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0ais"]
+size = Vector2(630, 374)
+
+[node name="CounterItem" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w0ais")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5bdbu")
