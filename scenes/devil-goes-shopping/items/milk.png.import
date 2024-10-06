@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7opt30ud67po"
-path="res://.godot/imported/background.png-f2280c059c88eb4a3b1ab26d03d8122d.ctex"
+uid="uid://cyooqkot0xjkt"
+path="res://.godot/imported/milk.png-ace7489d559b4e5ad1ef14564cdd5869.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/assets/background.png"
-dest_files=["res://.godot/imported/background.png-f2280c059c88eb4a3b1ab26d03d8122d.ctex"]
+source_file="res://scenes/devil-goes-shopping/items/milk.png"
+dest_files=["res://.godot/imported/milk.png-ace7489d559b4e5ad1ef14564cdd5869.ctex"]
 
 [params]
 

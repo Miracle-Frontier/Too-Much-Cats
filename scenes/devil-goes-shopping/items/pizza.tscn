@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwtgqdrx7ujf3"]
 
-[ext_resource type="PackedScene" uid="uid://bmnvaj1b5irp7" path="res://scenes/counter/items/counter_item.tscn" id="1_cmqmh"]
-[ext_resource type="Texture2D" uid="uid://c4d17e4nkett5" path="res://scenes/counter/items/pizza.png" id="2_nbwdg"]
+[ext_resource type="PackedScene" uid="uid://bmnvaj1b5irp7" path="res://scenes/devil-goes-shopping/items/counter_item.tscn" id="1_cmqmh"]
+[ext_resource type="Texture2D" uid="uid://c4d17e4nkett5" path="res://scenes/devil-goes-shopping/items/pizza.png" id="2_nbwdg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_567ia"]
 size = Vector2(950, 443)

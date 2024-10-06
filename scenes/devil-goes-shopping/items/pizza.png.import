@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b30yw6ath6ily"
-path="res://.godot/imported/ghost.png-c951433d3b5215e20d833c827faab50e.ctex"
+uid="uid://c4d17e4nkett5"
+path="res://.godot/imported/pizza.png-299ccb134fa8ba9cb73af7ccd255c433.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/assets/ghost.png"
-dest_files=["res://.godot/imported/ghost.png-c951433d3b5215e20d833c827faab50e.ctex"]
+source_file="res://scenes/devil-goes-shopping/items/pizza.png"
+dest_files=["res://.godot/imported/pizza.png-299ccb134fa8ba9cb73af7ccd255c433.ctex"]
 
 [params]
 

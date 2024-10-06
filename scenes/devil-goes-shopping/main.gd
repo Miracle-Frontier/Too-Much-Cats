@@ -16,7 +16,6 @@ func _ready() -> void:
 	var distance = 0
 	var previous_item
 	for i in range(spawn_amount):
-		print("zalypa")
 		var item = scene_list[randi() % scene_list.size()].instantiate()
 		$Items.add_child(item)
 		item.position = $Spawnpoint.position

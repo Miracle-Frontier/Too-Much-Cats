@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgx564wlo7h6f"
-path="res://.godot/imported/counter_conveyyor.png-45779a2e56378efbf4f8265ec22fa53f.ctex"
+path="res://.godot/imported/counter_conveyyor.png-088c3661c998ed1d70118352cf2e1094.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/assets/counter_conveyyor.png"
-dest_files=["res://.godot/imported/counter_conveyyor.png-45779a2e56378efbf4f8265ec22fa53f.ctex"]
+source_file="res://scenes/devil-goes-shopping/assets/counter_conveyyor.png"
+dest_files=["res://.godot/imported/counter_conveyyor.png-088c3661c998ed1d70118352cf2e1094.ctex"]
 
 [params]
 

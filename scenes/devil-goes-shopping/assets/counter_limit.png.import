@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqa2o84b24dq"
-path="res://.godot/imported/shelf.png-18333ac72e4b454e74b27fba33d23e82.ctex"
+uid="uid://dkate0ohtc44t"
+path="res://.godot/imported/counter_limit.png-5c44c2e2dbcf6e35f4c4058e6a424a54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/assets/shelf.png"
-dest_files=["res://.godot/imported/shelf.png-18333ac72e4b454e74b27fba33d23e82.ctex"]
+source_file="res://scenes/devil-goes-shopping/assets/counter_limit.png"
+dest_files=["res://.godot/imported/counter_limit.png-5c44c2e2dbcf6e35f4c4058e6a424a54.ctex"]
 
 [params]
 

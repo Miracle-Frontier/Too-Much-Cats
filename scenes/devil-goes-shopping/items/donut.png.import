@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sjqcgso1mojr"
-path="res://.godot/imported/pattern.png-48e4fdb406f2c611bebaa235f9a156b8.ctex"
+uid="uid://dfxxajgrcd5ad"
+path="res://.godot/imported/donut.png-c8dfead19bfa5e2af09251a758492e92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/assets/pattern.png"
-dest_files=["res://.godot/imported/pattern.png-48e4fdb406f2c611bebaa235f9a156b8.ctex"]
+source_file="res://scenes/devil-goes-shopping/items/donut.png"
+dest_files=["res://.godot/imported/donut.png-c8dfead19bfa5e2af09251a758492e92.ctex"]
 
 [params]
 

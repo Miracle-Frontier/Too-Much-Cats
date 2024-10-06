@@ -6,8 +6,10 @@ uniform float size_scale = 1.0;
 uniform vec4 color: source_color;
 uniform float rotation = 0.0; // угол наклона в радианах
 
+uniform vec2 size = vec2(2560,1440);
+
 void fragment() {
-    vec2 aspect_ratio = vec2(2589.0/754.0, 1.0); // соотношение сторон ColorRect
+    vec2 aspect_ratio = vec2(size.x/size.y, 1.0); // соотношение сторон ColorRect
     vec2 centered_uv = (UV * 2.0 - 1.0) * aspect_ratio; // центрируем и корректируем UV по соотношению сторон
     vec2 rotated_uv = vec2(
         centered_uv.x * cos(rotation) - centered_uv.y * sin(rotation),

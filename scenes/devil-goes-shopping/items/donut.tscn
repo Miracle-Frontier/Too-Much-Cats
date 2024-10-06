@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://8gv1k1mihjf5"]
 
-[ext_resource type="PackedScene" uid="uid://bmnvaj1b5irp7" path="res://scenes/counter/items/counter_item.tscn" id="1_32txj"]
+[ext_resource type="PackedScene" uid="uid://bmnvaj1b5irp7" path="res://scenes/devil-goes-shopping/items/counter_item.tscn" id="1_32txj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qgjqc"]
 size = Vector2(571, 309)

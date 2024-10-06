@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmnvaj1b5irp7"]
 
-[ext_resource type="Texture2D" uid="uid://dfxxajgrcd5ad" path="res://scenes/counter/items/donut.png" id="1_5bdbu"]
+[ext_resource type="Texture2D" uid="uid://dfxxajgrcd5ad" path="res://scenes/devil-goes-shopping/items/donut.png" id="1_5bdbu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0ais"]
 size = Vector2(630, 374)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfxxajgrcd5ad"
-path="res://.godot/imported/donut.png-1e7256d0fc255028339cf718ae5a8d0c.ctex"
+uid="uid://g7ymwynq7xdh"
+path="res://.godot/imported/arms-devil.png-314e19502caf53d80fcfeb98617b5fc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/items/donut.png"
-dest_files=["res://.godot/imported/donut.png-1e7256d0fc255028339cf718ae5a8d0c.ctex"]
+source_file="res://scenes/devil-goes-shopping/assets/arms-devil.png"
+dest_files=["res://.godot/imported/arms-devil.png-314e19502caf53d80fcfeb98617b5fc8.ctex"]
 
 [params]
 
