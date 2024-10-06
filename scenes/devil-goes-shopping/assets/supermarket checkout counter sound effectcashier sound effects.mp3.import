@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ttprlvbvabw3"
+path="res://.godot/imported/supermarket checkout counter sound effectcashier sound effects.mp3-82cad301a39a81aef681c47fca290514.mp3str"
+
+[deps]
+
+source_file="res://scenes/devil-goes-shopping/assets/supermarket checkout counter sound effectcashier sound effects.mp3"
+dest_files=["res://.godot/imported/supermarket checkout counter sound effectcashier sound effects.mp3-82cad301a39a81aef681c47fca290514.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

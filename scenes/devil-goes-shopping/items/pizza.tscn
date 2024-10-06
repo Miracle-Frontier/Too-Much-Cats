@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwtgqdrx7ujf3"]
+
+[ext_resource type="PackedScene" uid="uid://bmnvaj1b5irp7" path="res://scenes/devil-goes-shopping/items/counter_item.tscn" id="1_cmqmh"]
+[ext_resource type="Texture2D" uid="uid://c4d17e4nkett5" path="res://scenes/devil-goes-shopping/items/pizza.png" id="2_nbwdg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_567ia"]
+size = Vector2(950, 443)
+
+[node name="Pizza" instance=ExtResource("1_cmqmh")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -12.5)
+shape = SubResource("RectangleShape2D_567ia")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_nbwdg")
