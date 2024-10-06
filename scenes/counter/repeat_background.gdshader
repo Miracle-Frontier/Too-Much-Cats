@@ -1,15 +1,22 @@
-shader_type canvas_item; // шейдер для 2d элементов
+shader_type canvas_item;
 
-uniform sampler2D pattern: repeat_enable; // запрашивает изображение и ставит у него настройку на повторение его
+uniform sampler2D pattern: repeat_enable;
 uniform float speed = 1.0;
 uniform float size_scale = 1.0;
-uniform vec4 color: source_color; // запросить цвет и его прибавить
+uniform vec4 color: source_color;
+uniform float rotation = 0.0; // угол наклона в радианах
 
-void fragment() { 	// Called for every pixel the material is visible on.
-	vec2 centered_uv = UV* 2.0 - 1.0; // 	центрируем UV, теперь он от -1 до 1, а не от 0 до 1
-	vec2 scaled_uv = size_scale * centered_uv; // каждый пиксель будет увеличен
-	scaled_uv = scaled_uv * 0.5 + 0.5; // возвращаем их в диапозон от 0 До 1
-	vec2 moving_uv = vec2(scaled_uv.x - (TIME*speed), scaled_uv.y);
-	vec4 in_tex = texture(pattern, moving_uv);
-	COLOR = in_tex; // можно добавить * color чтобы умножался на source_color
+void fragment() {
+    vec2 aspect_ratio = vec2(2589.0/754.0, 1.0); // соотношение сторон ColorRect
+    vec2 centered_uv = (UV * 2.0 - 1.0) * aspect_ratio; // центрируем и корректируем UV по соотношению сторон
+    vec2 rotated_uv = vec2(
+        centered_uv.x * cos(rotation) - centered_uv.y * sin(rotation),
+        centered_uv.x * sin(rotation) + centered_uv.y * cos(rotation)
+    ); // поворот UV
+    vec2 scaled_uv = size_scale * rotated_uv;
+    scaled_uv = scaled_uv * 0.5 + 0.5; // возвращаем UV в диапазон от 0 до 1
+    vec2 moving_uv = vec2(scaled_uv.x - (TIME * speed), scaled_uv.y);
+
+    vec4 in_tex = texture(pattern, moving_uv);
+    COLOR = in_tex * color; // применяем цвет, если требуется
 }
