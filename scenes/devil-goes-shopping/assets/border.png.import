@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7opt30ud67po"
-path="res://.godot/imported/background.png-d82bc24b46f3e91c5083f69589729798.ctex"
+uid="uid://13416bnsspw1"
+path="res://.godot/imported/border.png-9d9cb373c6106fecb4853473735b6a8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/counter/background.png"
-dest_files=["res://.godot/imported/background.png-d82bc24b46f3e91c5083f69589729798.ctex"]
+source_file="res://scenes/devil-goes-shopping/assets/border.png"
+dest_files=["res://.godot/imported/border.png-9d9cb373c6106fecb4853473735b6a8c.ctex"]
 
 [params]
 

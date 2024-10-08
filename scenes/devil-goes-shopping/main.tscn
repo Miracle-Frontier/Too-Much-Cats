@@ -1,0 +1,320 @@
+[gd_scene load_steps=34 format=3 uid="uid://b3pfpnw5jtvpd"]
+
+[ext_resource type="AudioStream" uid="uid://ttprlvbvabw3" path="res://scenes/devil-goes-shopping/assets/supermarket checkout counter sound effectcashier sound effects.mp3" id="1_8v44o"]
+[ext_resource type="Script" path="res://scenes/devil-goes-shopping/main.gd" id="1_604fg"]
+[ext_resource type="PackedScene" uid="uid://8gv1k1mihjf5" path="res://scenes/devil-goes-shopping/items/donut.tscn" id="2_1riex"]
+[ext_resource type="PackedScene" uid="uid://57j7cvl7qfx" path="res://scenes/devil-goes-shopping/items/milk.tscn" id="3_cpjft"]
+[ext_resource type="PackedScene" uid="uid://dwtgqdrx7ujf3" path="res://scenes/devil-goes-shopping/items/pizza.tscn" id="4_nbb62"]
+[ext_resource type="Texture2D" uid="uid://blkungo4qkr5q" path="res://scenes/devil-goes-shopping/assets/counter.png" id="4_wyptm"]
+[ext_resource type="Texture2D" uid="uid://c7opt30ud67po" path="res://scenes/devil-goes-shopping/assets/background.png" id="5_6wing"]
+[ext_resource type="Shader" path="res://scenes/devil-goes-shopping/repeat_background.gdshader" id="6_0erll"]
+[ext_resource type="Texture2D" uid="uid://sjqcgso1mojr" path="res://scenes/devil-goes-shopping/assets/pattern.png" id="7_bvfra"]
+[ext_resource type="Texture2D" uid="uid://b30yw6ath6ily" path="res://scenes/devil-goes-shopping/assets/ghost.png" id="7_xs5mj"]
+[ext_resource type="Texture2D" uid="uid://c78wprpadi187" path="res://scenes/devil-goes-shopping/assets/counter_background_w.png" id="8_na4n3"]
+[ext_resource type="Texture2D" uid="uid://c4f6wgoo0x7ua" path="res://scenes/devil-goes-shopping/assets/counter_background.png" id="9_mikyi"]
+[ext_resource type="Texture2D" uid="uid://dqa2o84b24dq" path="res://scenes/devil-goes-shopping/assets/shelf.png" id="10_501hu"]
+[ext_resource type="Texture2D" uid="uid://bgx564wlo7h6f" path="res://scenes/devil-goes-shopping/assets/counter_conveyyor.png" id="10_gxc6t"]
+[ext_resource type="Texture2D" uid="uid://dkate0ohtc44t" path="res://scenes/devil-goes-shopping/assets/counter_limit.png" id="11_wi7gr"]
+[ext_resource type="Texture2D" uid="uid://13416bnsspw1" path="res://scenes/devil-goes-shopping/assets/border.png" id="12_1sesc"]
+[ext_resource type="Texture2D" uid="uid://b5o2h66f560iv" path="res://scenes/devil-goes-shopping/assets/head-devil.png" id="12_itpih"]
+[ext_resource type="Texture2D" uid="uid://1x1248n8kbh4" path="res://scenes/devil-goes-shopping/assets/tail.png" id="16_qocst"]
+[ext_resource type="Texture2D" uid="uid://y5cwu8luj40a" path="res://scenes/devil-goes-shopping/assets/cutscene/devil.png" id="16_yv1by"]
+[ext_resource type="Texture2D" uid="uid://da4ta1u2jkt28" path="res://scenes/devil-goes-shopping/assets/cutscene/counter.png" id="17_tpnga"]
+[ext_resource type="Texture2D" uid="uid://g7ymwynq7xdh" path="res://scenes/devil-goes-shopping/assets/arms-devil.png" id="18_mvmsg"]
+[ext_resource type="Texture2D" uid="uid://0dq3c7rxii6i" path="res://scenes/devil-goes-shopping/assets/cutscene/around.png" id="19_y1i8y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0yo4q"]
+shader = ExtResource("6_0erll")
+shader_parameter/speed = 0.22
+shader_parameter/size_scale = 3.55
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/rotation = 44.81
+shader_parameter/size = Vector2(2589, 754)
+shader_parameter/pattern = ExtResource("7_bvfra")
+
+[sub_resource type="Animation" id="Animation_c81w4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -387)]
+}
+
+[sub_resource type="Animation" id="Animation_l5xeq"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(0, -387), Vector2(0, -350), Vector2(0, -387)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5mf1i"]
+_data = {
+"RESET": SubResource("Animation_c81w4"),
+"new_animation": SubResource("Animation_l5xeq")
+}
+
+[sub_resource type="Animation" id="Animation_uy2m5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-85, -353)]
+}
+
+[sub_resource type="Animation" id="Animation_86xiy"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(-85, -353), Vector2(-85, -281), Vector2(-85, -353)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhki5"]
+_data = {
+"RESET": SubResource("Animation_uy2m5"),
+"new_animation": SubResource("Animation_86xiy")
+}
+
+[sub_resource type="Animation" id="Animation_es83x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Devil:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(324, -1)]
+}
+
+[sub_resource type="Animation" id="Animation_1t83f"]
+resource_name = "walk"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Devil:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.53333, 2.96667, 4),
+"transitions": PackedFloat32Array(1, 1, -0.5, -0.5),
+"update": 0,
+"values": [Vector2(260, -1), Vector2(260, -1), Vector2(-114, -1), Vector2(-114, -1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5s24a"]
+_data = {
+"RESET": SubResource("Animation_es83x"),
+"walk": SubResource("Animation_1t83f")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jwj8c"]
+shader = ExtResource("6_0erll")
+shader_parameter/speed = 0.22
+shader_parameter/size_scale = 7.415
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/rotation = 44.81
+shader_parameter/size = Vector2(2560, 1440)
+shader_parameter/pattern = ExtResource("7_bvfra")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_604fg")
+scene_list = Array[PackedScene]([ExtResource("4_nbb62"), ExtResource("3_cpjft"), ExtResource("2_1riex")])
+
+[node name="SupermarketCheckoutCounterSoundEffectcashierSoundEffects" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(370, 432)
+stream = ExtResource("1_8v44o")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Counter" type="Sprite2D" parent="."]
+position = Vector2(2912, -1871)
+texture = ExtResource("4_wyptm")
+
+[node name="Background2" type="Sprite2D" parent="."]
+texture = ExtResource("5_6wing")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_0yo4q")
+offset_left = -1294.0
+offset_top = -734.0
+offset_right = 1295.0
+offset_bottom = 20.0
+metadata/_edit_lock_ = true
+
+[node name="Shelf" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(911, -246)
+texture = ExtResource("10_501hu")
+
+[node name="Ghost" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -387)
+texture = ExtResource("7_xs5mj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ghost"]
+libraries = {
+"": SubResource("AnimationLibrary_5mf1i")
+}
+autoplay = "new_animation"
+
+[node name="Tail" type="Sprite2D" parent="."]
+position = Vector2(-811, -364)
+texture = ExtResource("16_qocst")
+
+[node name="Head-devil" type="Sprite2D" parent="."]
+position = Vector2(-85, -353)
+texture = ExtResource("12_itpih")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Head-devil"]
+libraries = {
+"": SubResource("AnimationLibrary_qhki5")
+}
+autoplay = "new_animation"
+
+[node name="CounterBackgroundW" type="Sprite2D" parent="."]
+position = Vector2(0, 27)
+texture = ExtResource("8_na4n3")
+metadata/_edit_lock_ = true
+
+[node name="CounterBackground" type="Sprite2D" parent="."]
+position = Vector2(0, 359)
+texture = ExtResource("9_mikyi")
+metadata/_edit_lock_ = true
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(2560, 0)
+autoscroll = Vector2(-100, 0)
+repeat_times = 3
+metadata/_edit_lock_ = true
+
+[node name="CounterConveyyor" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(0, 358)
+texture = ExtResource("10_gxc6t")
+metadata/_edit_lock_ = true
+
+[node name="CounterLimit" type="Sprite2D" parent="."]
+position = Vector2(-1087, 373)
+texture = ExtResource("11_wi7gr")
+metadata/_edit_lock_ = true
+
+[node name="Arms-devil" type="Sprite2D" parent="."]
+position = Vector2(-2, -204)
+texture = ExtResource("18_mvmsg")
+
+[node name="Items" type="Node2D" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -2080.0
+offset_top = -720.0
+offset_right = -1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 1280.0
+offset_top = -720.0
+offset_right = 2080.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = -1280.0
+offset_top = -2160.0
+offset_right = 1280.0
+offset_bottom = -720.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = -1280.0
+offset_top = 720.0
+offset_right = 1280.0
+offset_bottom = 2160.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="Spawnpoint" type="Marker2D" parent="."]
+position = Vector2(-119, 339)
+
+[node name="StartingCutscene" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StartingCutscene"]
+libraries = {
+"": SubResource("AnimationLibrary_5s24a")
+}
+autoplay = "walk"
+
+[node name="Background2" type="Sprite2D" parent="StartingCutscene"]
+texture = ExtResource("5_6wing")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect6" type="ColorRect" parent="StartingCutscene"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_jwj8c")
+offset_left = -1280.0
+offset_top = -720.0
+offset_right = 1280.0
+offset_bottom = 720.0
+metadata/_edit_lock_ = true
+
+[node name="Border" type="Sprite2D" parent="StartingCutscene"]
+texture = ExtResource("12_1sesc")
+metadata/_edit_lock_ = true
+
+[node name="Around" type="Sprite2D" parent="StartingCutscene"]
+position = Vector2(105, -97)
+texture = ExtResource("19_y1i8y")
+
+[node name="Devil" type="Sprite2D" parent="StartingCutscene"]
+position = Vector2(324, -1)
+texture = ExtResource("16_yv1by")
+
+[node name="Counter" type="Sprite2D" parent="StartingCutscene"]
+position = Vector2(-555, 344)
+texture = ExtResource("17_tpnga")
