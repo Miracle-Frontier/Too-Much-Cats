@@ -230,7 +230,7 @@ autoscroll = Vector2(-100, 0)
 repeat_times = 3
 metadata/_edit_lock_ = true
 
-[node name="CounterConveyyor" type="Sprite2D" parent="Parallax2D"]
+[node name="CounterConveyor" type="Sprite2D" parent="Parallax2D"]
 position = Vector2(0, 358)
 texture = ExtResource("10_gxc6t")
 metadata/_edit_lock_ = true
