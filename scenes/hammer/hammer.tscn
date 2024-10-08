@@ -1,0 +1,171 @@
+[gd_scene load_steps=20 format=3 uid="uid://c6s61ln8hi4pp"]
+
+[ext_resource type="Script" path="res://scenes/hammer/gameplay.gd" id="1_xus7a"]
+[ext_resource type="Texture2D" uid="uid://cl1qxttfg8k4u" path="res://scenes/hammer/sprites/background.png" id="2_8obdo"]
+[ext_resource type="Script" path="res://scenes/hammer/gui.gd" id="2_mqdo1"]
+[ext_resource type="Texture2D" uid="uid://compi4mxjl6bs" path="res://scenes/hammer/sprites/coffin.png" id="3_707xd"]
+[ext_resource type="Texture2D" uid="uid://m7c5ugix1231" path="res://scenes/hammer/sprites/vent_off.png" id="3_c8r25"]
+[ext_resource type="Script" path="res://scenes/hammer/coffin.gd" id="3_e0oef"]
+[ext_resource type="Texture2D" uid="uid://cudrnsjy160gm" path="res://scenes/hammer/sprites/skelet_back.png" id="4_3td15"]
+[ext_resource type="Texture2D" uid="uid://cgm3hh851l12k" path="res://scenes/hammer/sprites/vent_on.png" id="5_80n2y"]
+[ext_resource type="Texture2D" uid="uid://cjssg4xt4mm60" path="res://scenes/hammer/sprites/meter_back.png" id="5_rp1mk"]
+[ext_resource type="Texture2D" uid="uid://car1m3nemw6nt" path="res://scenes/hammer/sprites/meter.png" id="6_j44rt"]
+[ext_resource type="Texture2D" uid="uid://djcr1cyen1weo" path="res://scenes/hammer/sprites/skelet.png" id="7_fo3is"]
+[ext_resource type="Texture2D" uid="uid://c1yovxrs5kgrw" path="res://scenes/hammer/sprites/skelet_head.png" id="8_m3xpv"]
+[ext_resource type="Texture2D" uid="uid://cy0kr586wvdjv" path="res://scenes/hammer/sprites/button_down.png" id="10_lios3"]
+[ext_resource type="Texture2D" uid="uid://lq4nsutb0sxi" path="res://scenes/hammer/sprites/button.png" id="11_kw01g"]
+[ext_resource type="Texture2D" uid="uid://fds2vdmr3kbw" path="res://scenes/hammer/sprites/clicker.png" id="12_g1qk8"]
+[ext_resource type="Texture2D" uid="uid://cnpdm7nkukv7t" path="res://scenes/hammer/sprites/clicker_off.png" id="13_2ovcx"]
+[ext_resource type="Texture2D" uid="uid://c4xkqkkhrp02h" path="res://scenes/hammer/sprites/clicker_on.png" id="14_2u34k"]
+[ext_resource type="Texture2D" uid="uid://cp38dv1v4f4kg" path="res://scenes/hammer/sprites/hammer.png" id="15_ei77a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c4wg5"]
+font_size = 75
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Hammer" type="Node2D"]
+
+[node name="Gameplay" type="Node2D" parent="."]
+script = ExtResource("1_xus7a")
+
+[node name="TimerShiftClient" type="Timer" parent="Gameplay"]
+one_shot = true
+
+[node name="TimerSwing" type="Timer" parent="Gameplay"]
+one_shot = true
+
+[node name="TimerHit" type="Timer" parent="Gameplay"]
+one_shot = true
+
+[node name="Scene" type="Node2D" parent="Gameplay"]
+
+[node name="Background" type="Sprite2D" parent="Gameplay/Scene"]
+position = Vector2(1280, 720)
+texture = ExtResource("2_8obdo")
+
+[node name="Coffin" type="Node2D" parent="Gameplay/Scene"]
+position = Vector2(79, 42)
+script = ExtResource("3_e0oef")
+
+[node name="VentOff" type="Sprite2D" parent="Gameplay/Scene/Coffin"]
+position = Vector2(1694, 767)
+texture = ExtResource("3_c8r25")
+
+[node name="VentOn" type="Sprite2D" parent="Gameplay/Scene/Coffin"]
+visible = false
+position = Vector2(1618, 771)
+texture = ExtResource("5_80n2y")
+
+[node name="CoffinBase" type="Sprite2D" parent="Gameplay/Scene/Coffin"]
+position = Vector2(1740, 607)
+texture = ExtResource("3_707xd")
+
+[node name="SkeletBack" type="Sprite2D" parent="Gameplay/Scene/Coffin"]
+position = Vector2(1712, 750)
+texture = ExtResource("4_3td15")
+
+[node name="MeterBack" type="Sprite2D" parent="Gameplay/Scene/Coffin"]
+position = Vector2(1657, 639)
+texture = ExtResource("5_rp1mk")
+
+[node name="Meter" type="Sprite2D" parent="Gameplay/Scene/Coffin"]
+position = Vector2(1638, 1029)
+texture = ExtResource("6_j44rt")
+
+[node name="Skelet" type="Sprite2D" parent="Gameplay/Scene/Coffin"]
+position = Vector2(1651, 545)
+texture = ExtResource("7_fo3is")
+
+[node name="SkeletHead" type="Sprite2D" parent="Gameplay/Scene/Coffin"]
+position = Vector2(1751, 407)
+texture = ExtResource("8_m3xpv")
+
+[node name="Button" type="Node2D" parent="Gameplay/Scene"]
+position = Vector2(-9, -54)
+
+[node name="ButtonDown" type="Sprite2D" parent="Gameplay/Scene/Button"]
+position = Vector2(1527.5, 1241.5)
+texture = ExtResource("10_lios3")
+
+[node name="ButtonBase" type="Sprite2D" parent="Gameplay/Scene/Button"]
+position = Vector2(1522.5, 1162.5)
+texture = ExtResource("11_kw01g")
+
+[node name="Controller" type="Node2D" parent="Gameplay/Scene"]
+position = Vector2(-9, -54)
+
+[node name="Clicker" type="Sprite2D" parent="Gameplay/Scene/Controller"]
+position = Vector2(1383, 1380)
+texture = ExtResource("12_g1qk8")
+
+[node name="ClickerOff" type="Sprite2D" parent="Gameplay/Scene/Controller"]
+position = Vector2(1307.5, 1369)
+texture = ExtResource("13_2ovcx")
+
+[node name="ClickerOn" type="Sprite2D" parent="Gameplay/Scene/Controller"]
+visible = false
+position = Vector2(1360.5, 1370)
+texture = ExtResource("14_2u34k")
+
+[node name="Hammer" type="Sprite2D" parent="Gameplay/Scene"]
+position = Vector2(730, 1049)
+texture = ExtResource("15_ei77a")
+offset = Vector2(6.7, -408)
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 564.0
+offset_bottom = 255.0
+script = ExtResource("2_mqdo1")
+
+[node name="Debug" type="GridContainer" parent="GUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 2
+
+[node name="step" type="Label" parent="GUI/Debug"]
+layout_mode = 2
+text = "Этап: "
+
+[node name="step_v" type="Label" parent="GUI/Debug"]
+layout_mode = 2
+text = "None"
+
+[node name="coins" type="Label" parent="GUI/Debug"]
+layout_mode = 2
+text = "Монетки: "
+
+[node name="coins_v" type="Label" parent="GUI/Debug"]
+layout_mode = 2
+text = "None"
+
+[node name="rotate" type="Label" parent="GUI/Debug"]
+layout_mode = 2
+text = "Посл.удар: "
+
+[node name="rotate_v" type="Label" parent="GUI/Debug"]
+layout_mode = 2
+text = "None"
+
+[node name="Reward" type="Label" parent="GUI"]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 371.0
+offset_right = 1043.0
+offset_bottom = 513.0
+text = "0 монеток
+0%"
+label_settings = SubResource("LabelSettings_c4wg5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="coins_updated" from="Gameplay" to="GUI" method="_on_gameplay_coins_updated"]
+[connection signal="last_hit_rotate_update" from="Gameplay" to="GUI" method="_on_gameplay_last_hit_rotate_update"]
+[connection signal="reward_show" from="Gameplay" to="GUI" method="_on_gameplay_reward_show"]
+[connection signal="stage_updated" from="Gameplay" to="GUI" method="_on_gameplay_stage_updated"]
+[connection signal="timeout" from="Gameplay/TimerShiftClient" to="Gameplay" method="_on_timer_shift_client_timeout"]
+[connection signal="timeout" from="Gameplay/TimerSwing" to="Gameplay" method="_on_timer_swing_timeout"]
+[connection signal="timeout" from="Gameplay/TimerHit" to="Gameplay" method="_on_timer_hit_timeout"]
