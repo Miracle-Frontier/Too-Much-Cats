@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="fake games"
-run/main_scene="res://scenes/hammer/hammer.tscn"
+config/name="РАСХИТИТЕЛЬ ГРОБНИЦ (ЖЕСТЬ)"
+run/main_scene="res://Game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://icon.png"
@@ -23,7 +23,7 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=2560
 window/size/viewport_height=1440
-window/size/mode=4
+window/size/mode=3
 window/size/window_height_override=1000
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"

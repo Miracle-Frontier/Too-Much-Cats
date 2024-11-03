@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://n44qsai1bda8"]
+
+[ext_resource type="Texture2D" uid="uid://dj6c5gjeejo0" path="res://assets/main.png" id="1_115n3"]
+[ext_resource type="Script" path="res://game.gd" id="1_gn225"]
+[ext_resource type="Script" path="res://tombstones.gd" id="2_x8e8o"]
+
+[sub_resource type="Animation" id="Animation_bauso"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 50), Vector2(0, -50), Vector2(0, 50)]
+}
+
+[sub_resource type="Animation" id="Animation_bivd1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_koy3b"]
+_data = {
+"RESET": SubResource("Animation_bivd1"),
+"idle": SubResource("Animation_bauso")
+}
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_gn225")
+
+[node name="Main" type="Sprite2D" parent="."]
+position = Vector2(225, 533)
+texture = ExtResource("1_115n3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main"]
+libraries = {
+"": SubResource("AnimationLibrary_koy3b")
+}
+autoplay = "idle"
+
+[node name="Tombstones" type="Node2D" parent="."]
+position = Vector2(517.64, 1112)
+script = ExtResource("2_x8e8o")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 1145.0
+offset_top = 67.0
+offset_right = 1337.0
+offset_bottom = 233.0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/normal_font_size = 100
+text = "1"

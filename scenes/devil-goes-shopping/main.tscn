@@ -303,10 +303,6 @@ offset_right = 1280.0
 offset_bottom = 720.0
 metadata/_edit_lock_ = true
 
-[node name="Border" type="Sprite2D" parent="StartingCutscene"]
-texture = ExtResource("12_1sesc")
-metadata/_edit_lock_ = true
-
 [node name="Around" type="Sprite2D" parent="StartingCutscene"]
 position = Vector2(105, -97)
 texture = ExtResource("19_y1i8y")
@@ -318,3 +314,7 @@ texture = ExtResource("16_yv1by")
 [node name="Counter" type="Sprite2D" parent="StartingCutscene"]
 position = Vector2(-555, 344)
 texture = ExtResource("17_tpnga")
+
+[node name="Border" type="Sprite2D" parent="."]
+texture = ExtResource("12_1sesc")
+metadata/_edit_lock_ = true
