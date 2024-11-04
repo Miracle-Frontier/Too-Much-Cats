@@ -27,6 +27,7 @@ window/size/mode=3
 window/size/window_height_override=1000
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+window/vsync/vsync_mode=3
 
 [input]
 

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://6gjed6filef2"]
+
+[ext_resource type="PackedScene" uid="uid://dxso7csoc4xho" path="res://tombstones/tombstone.tscn" id="1_1qch6"]
+[ext_resource type="Texture2D" uid="uid://c41yeo6s6rnpx" path="res://assets/tombstone_lava.png" id="2_vk1wa"]
+
+[node name="tombstone_lava" instance=ExtResource("1_1qch6")]
+
+[node name="Tombstone" parent="." index="0"]
+texture = ExtResource("2_vk1wa")
