@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 
 	if not Input.is_action_pressed("click"): 
 		direction = 0
-		velocity.x = sign(velocity.x)*max(abs(velocity.x)-1,0)
+		velocity.x = move_toward(velocity.x, 0, SPEED) # friction
 	else:
 		velocity.x = direction * SPEED
 	

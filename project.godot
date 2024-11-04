@@ -19,6 +19,14 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
+[autoload]
+
+Autoload="*res://Autoload.gd"
+
+[debug]
+
+settings/stdout/print_fps=true
+
 [display]
 
 window/size/viewport_width=2560
@@ -27,7 +35,7 @@ window/size/mode=3
 window/size/window_height_override=1000
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-window/vsync/vsync_mode=3
+window/vsync/vsync_mode=0
 
 [input]
 

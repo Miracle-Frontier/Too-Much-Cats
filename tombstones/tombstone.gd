@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_click_detection_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if (event.is_released()):
+	if (event is InputEventMouseButton && event.is_released()):
 		get_tree().current_scene.add_child(scene.instantiate())

@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bg7iqtmhh72e6"]
+[gd_scene load_steps=4 format=3 uid="uid://bg7iqtmhh72e6"]
 
 [ext_resource type="PackedScene" uid="uid://dxso7csoc4xho" path="res://tombstones/tombstone.tscn" id="1_pcd3c"]
 [ext_resource type="Texture2D" uid="uid://bdgd0j8ei243j" path="res://assets/tombstone_hammer.png" id="2_ttfjn"]
+[ext_resource type="PackedScene" uid="uid://c6s61ln8hi4pp" path="res://scenes/hammer/hammer.tscn" id="2_xskx8"]
 
 [node name="Tombstone_Hammer" instance=ExtResource("1_pcd3c")]
+scene = ExtResource("2_xskx8")
 
 [node name="Tombstone" parent="." index="0"]
 texture = ExtResource("2_ttfjn")
