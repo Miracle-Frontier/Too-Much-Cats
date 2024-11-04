@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c424bw2cmssmj"]
+
+[ext_resource type="Texture2D" uid="uid://by1msivqcoxvu" path="res://icon.png" id="1_21sut"]
+
+[sub_resource type="GDScript" id="GDScript_1066y"]
+script/source = "extends Node2D
+
+
+func _on_timer_timeout() -> void:
+	var game: Game = get_tree().current_scene
+	game.next()
+	queue_free()
+	
+	
+"
+
+[node name="Dummyplugscene" type="Node2D"]
+script = SubResource("GDScript_1066y")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(225, 174)
+scale = Vector2(0.348437, 0.348437)
+texture = ExtResource("1_21sut")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 541.0
+offset_top = 136.0
+offset_right = 581.0
+offset_bottom = 159.0
+text = "WELCOME TO DUMMY SCENE!!!!"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

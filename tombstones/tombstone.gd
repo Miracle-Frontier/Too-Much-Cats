@@ -2,7 +2,7 @@ extends Node2D
 
 class_name Tombstone
 
-var scene = preload("res://scenes/hammer/hammer.tscn")
+@export var scene = load("res://scenes/hammer/hammer.tscn")
 
 func _ready() -> void:
 	#get_parent().next()

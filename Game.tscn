@@ -1,8 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://n44qsai1bda8"]
+[gd_scene load_steps=8 format=3 uid="uid://n44qsai1bda8"]
 
 [ext_resource type="Texture2D" uid="uid://dj6c5gjeejo0" path="res://assets/main.png" id="1_115n3"]
 [ext_resource type="Script" path="res://game.gd" id="1_gn225"]
-[ext_resource type="Script" path="res://tombstones.gd" id="2_x8e8o"]
+[ext_resource type="Script" path="res://tombstones/tombstones.gd" id="2_x8e8o"]
+[ext_resource type="Texture2D" uid="uid://dluw1k4ytwdr2" path="res://assets/ground.png" id="4_albar"]
+
+[sub_resource type="Animation" id="Animation_bivd1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_bauso"]
 resource_name = "idle"
@@ -21,21 +37,6 @@ tracks/0/keys = {
 "values": [Vector2(0, 50), Vector2(0, -50), Vector2(0, 50)]
 }
 
-[sub_resource type="Animation" id="Animation_bivd1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_koy3b"]
 _data = {
 "RESET": SubResource("Animation_bivd1"),
@@ -45,8 +46,19 @@ _data = {
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gn225")
 
+[node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(1504, 1170)
+scale = Vector2(12.4882, 1)
+texture = ExtResource("4_albar")
+
+[node name="Tombstones" type="Node2D" parent="."]
+position = Vector2(517.64, 1029)
+scale = Vector2(2, 2)
+script = ExtResource("2_x8e8o")
+
 [node name="Main" type="Sprite2D" parent="."]
-position = Vector2(225, 533)
+position = Vector2(238.25, 570.658)
+scale = Vector2(1.12679, 1.12679)
 texture = ExtResource("1_115n3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Main"]
@@ -54,10 +66,6 @@ libraries = {
 "": SubResource("AnimationLibrary_koy3b")
 }
 autoplay = "idle"
-
-[node name="Tombstones" type="Node2D" parent="."]
-position = Vector2(517.64, 1112)
-script = ExtResource("2_x8e8o")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
