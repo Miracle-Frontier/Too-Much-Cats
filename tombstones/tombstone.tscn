@@ -19,6 +19,6 @@ process_mode = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickDetection"]
 shape = SubResource("RectangleShape2D_ou683")
-debug_color = Color(0.563855, 0.432861, 0.906909, 0.42)
+debug_color = Color(0.564706, 0.431373, 0.905882, 0)
 
 [connection signal="input_event" from="ClickDetection" to="." method="_on_click_detection_input_event"]
