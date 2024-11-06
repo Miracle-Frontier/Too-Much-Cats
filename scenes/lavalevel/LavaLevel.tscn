@@ -59,6 +59,7 @@ texture_normal = SubResource("PlaceholderTexture2D_d07kv")
 action = "right"
 
 [node name="Hero" parent="." instance=ExtResource("4_kuqx8")]
+z_index = 2
 position = Vector2(26, -321)
 
 [node name="Camera2D" type="Camera2D" parent="Hero"]

@@ -1,9 +1,53 @@
-[gd_scene load_steps=8 format=3 uid="uid://n44qsai1bda8"]
+[gd_scene load_steps=14 format=3 uid="uid://n44qsai1bda8"]
 
 [ext_resource type="Texture2D" uid="uid://dj6c5gjeejo0" path="res://assets/main.png" id="1_115n3"]
 [ext_resource type="Script" path="res://game.gd" id="1_gn225"]
+[ext_resource type="Texture2D" uid="uid://icbdwdcvaip0" path="res://assets/deco.png" id="2_gewqo"]
 [ext_resource type="Script" path="res://tombstones/tombstones.gd" id="2_x8e8o"]
 [ext_resource type="Texture2D" uid="uid://dluw1k4ytwdr2" path="res://assets/ground.png" id="4_albar"]
+[ext_resource type="Texture2D" uid="uid://dili1gwhflkou" path="res://assets/moon.png" id="5_kixgt"]
+[ext_resource type="Texture2D" uid="uid://dfveuokwxjd2s" path="res://assets/deco2.png" id="6_s8tgj"]
+
+[sub_resource type="Animation" id="Animation_nttlx"]
+resource_name = "next"
+length = 1.2
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tombstones")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"next"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_tween_stuff"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vh78h"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qly0a"]
+_data = {
+"RESET": SubResource("Animation_vh78h"),
+"next": SubResource("Animation_nttlx")
+}
 
 [sub_resource type="Animation" id="Animation_bivd1"]
 length = 0.001
@@ -46,26 +90,26 @@ _data = {
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gn225")
 
-[node name="Ground" type="Sprite2D" parent="."]
-position = Vector2(1504, 1170)
-scale = Vector2(12.4882, 1)
+[node name="Deco" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(4000, 0)
+
+[node name="Deco" type="Sprite2D" parent="Deco"]
+position = Vector2(1343, 934)
+texture = ExtResource("2_gewqo")
+
+[node name="Ground" type="Parallax2D" parent="."]
+repeat_size = Vector2(2560, 0)
+
+[node name="Ground" type="Sprite2D" parent="Ground"]
+position = Vector2(1280, 1220)
+scale = Vector2(1, 1)
 texture = ExtResource("4_albar")
 
 [node name="Tombstones" type="Node2D" parent="."]
-position = Vector2(517.64, 1029)
-scale = Vector2(2, 2)
+position = Vector2(517.64, 1137)
+scale = Vector2(1, 1)
 script = ExtResource("2_x8e8o")
-
-[node name="Main" type="Sprite2D" parent="."]
-position = Vector2(238.25, 570.658)
-scale = Vector2(1.12679, 1.12679)
-texture = ExtResource("1_115n3")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Main"]
-libraries = {
-"": SubResource("AnimationLibrary_koy3b")
-}
-autoplay = "idle"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
@@ -77,3 +121,37 @@ offset_bottom = 233.0
 theme_override_font_sizes/bold_italics_font_size = 0
 theme_override_font_sizes/normal_font_size = 100
 text = "1"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qly0a")
+}
+
+[node name="move" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimationPlayer")
+
+[node name="Deco2" type="Parallax2D" parent="."]
+repeat_size = Vector2(2400, 0)
+
+[node name="Deco2" type="Sprite2D" parent="Deco2"]
+position = Vector2(1265, 504)
+scale = Vector2(1.14321, 1.14321)
+texture = ExtResource("6_s8tgj")
+
+[node name="Moon" type="Parallax2D" parent="."]
+repeat_size = Vector2(6000, 0)
+
+[node name="Moon" type="Sprite2D" parent="Moon"]
+position = Vector2(1875, 380)
+texture = ExtResource("5_kixgt")
+
+[node name="Main" type="Sprite2D" parent="."]
+position = Vector2(238.25, 570.658)
+scale = Vector2(1.12679, 1.12679)
+texture = ExtResource("1_115n3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main"]
+libraries = {
+"": SubResource("AnimationLibrary_koy3b")
+}
+autoplay = "idle"

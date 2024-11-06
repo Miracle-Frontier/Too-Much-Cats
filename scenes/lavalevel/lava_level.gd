@@ -20,7 +20,6 @@ func _ready() -> void:
 #@onready var offset_right = $Right.position.y - $Hero.position.y
 
 func _process(delta: float) -> void:
-	print($Hero.position.y)
 	if $Hero.position.y <= -FINISH_LINE_HEIGHT:
 		end_level()
 		var game: Game = get_tree().current_scene
