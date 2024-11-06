@@ -8,6 +8,7 @@ var current_tombstone: Tombstone = null
 var last_tombstone_spawn_position
 @onready var game: Game = get_tree().current_scene
 
+
 func _ready() -> void:
 	for i in range(4):
 		var tombstone = _new_tombstone()
