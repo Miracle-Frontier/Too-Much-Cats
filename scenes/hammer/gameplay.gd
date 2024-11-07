@@ -15,7 +15,7 @@ var last_rotation = 0  # Информация о последнем зафикс
 var target_cones: Array = []  # Конусы, по которым должен проводиться удар [угол, наклон]
 
 ### Настройка сложности
-@export var difficult: float = 0.2  # От 0.0 до 1.0
+@export var difficult: float = 0  # От 0.0 до 1.0
 @export var dif_max_cones: int = 4  # Количество конусов при сложности 1.0 (min: 0)
 @export var dif_min_time = [1.9, 1.7]  # Диапазон времени замаха при мин. сложности
 @export var dif_max_time = [1.7, 1.3]  # Диапазон времени замаха при макс. сложности
@@ -82,6 +82,7 @@ func _process(delta: float) -> void:
 		$Scene/Coffin/VentOn.visible = false;
 
 
+# Генерация конусов
 func generate_cones():
 	cone_indicators._on_clear_cones()
 	target_cones.clear()
@@ -103,6 +104,7 @@ func generate_cones():
 			cone_indicators._on_add_cone(cone_angle, random_direction)
 
 
+# Получение значения в зависимости от сложности
 func get_dif_value(min, max):
 	return min + (max - min) * difficult
 
@@ -150,6 +152,11 @@ func _on_timer_swing_timeout() -> void:
 
 # Клиент ударил, время смены клиента
 func _on_timer_hit_timeout() -> void:
+	# TODO: ВЫХОД ИЗ ИГРЫ, ПРИРОСТ СЛОЖНОСТИ, отрефакторить
+	difficult += 0.1
+	if difficult > 1:
+		queue_free()
+		
 	generate_cones()
 	timer_shift_client.wait_time = 1
 	timer_shift_client.start()

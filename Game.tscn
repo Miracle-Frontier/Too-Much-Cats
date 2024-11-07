@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://n44qsai1bda8"]
+[gd_scene load_steps=14 format=3 uid="uid://d15ldcf0nhqy2"]
 
 [ext_resource type="Texture2D" uid="uid://dj6c5gjeejo0" path="res://assets/main.png" id="1_115n3"]
 [ext_resource type="Script" path="res://game.gd" id="1_gn225"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://dluw1k4ytwdr2" path="res://assets/ground.png" id="4_albar"]
 [ext_resource type="Texture2D" uid="uid://dili1gwhflkou" path="res://assets/moon.png" id="5_kixgt"]
 [ext_resource type="Texture2D" uid="uid://dfveuokwxjd2s" path="res://assets/deco2.png" id="6_s8tgj"]
+
+[sub_resource type="Animation" id="Animation_vh78h"]
+length = 0.001
 
 [sub_resource type="Animation" id="Animation_nttlx"]
 resource_name = "next"
@@ -39,9 +42,6 @@ tracks/1/keys = {
 "method": &"_tween_stuff"
 }]
 }
-
-[sub_resource type="Animation" id="Animation_vh78h"]
-length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qly0a"]
 _data = {
@@ -103,12 +103,10 @@ repeat_size = Vector2(2560, 0)
 
 [node name="Ground" type="Sprite2D" parent="Ground"]
 position = Vector2(1280, 1220)
-scale = Vector2(1, 1)
 texture = ExtResource("4_albar")
 
 [node name="Tombstones" type="Node2D" parent="."]
 position = Vector2(517.64, 1137)
-scale = Vector2(1, 1)
 script = ExtResource("2_x8e8o")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
