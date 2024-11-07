@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scenes/hammer/gui.gd" id="2_mqdo1"]
 [ext_resource type="Texture2D" uid="uid://compi4mxjl6bs" path="res://scenes/hammer/sprites/coffin.png" id="3_707xd"]
 [ext_resource type="Texture2D" uid="uid://m7c5ugix1231" path="res://scenes/hammer/sprites/vent_off.png" id="3_c8r25"]
-[ext_resource type="Script" path="res://scenes/hammer/coffin.gd" id="3_e0oef"]
+[ext_resource type="Script" path="res://scenes/hammer/cone_indicator.gd" id="3_mtowm"]
 [ext_resource type="Texture2D" uid="uid://cudrnsjy160gm" path="res://scenes/hammer/sprites/skelet_back.png" id="4_3td15"]
 [ext_resource type="Texture2D" uid="uid://cgm3hh851l12k" path="res://scenes/hammer/sprites/vent_on.png" id="5_80n2y"]
 [ext_resource type="Texture2D" uid="uid://cjssg4xt4mm60" path="res://scenes/hammer/sprites/meter_back.png" id="5_rp1mk"]
@@ -44,9 +44,12 @@ one_shot = true
 position = Vector2(1280, 720)
 texture = ExtResource("2_8obdo")
 
+[node name="Indicators" type="Node2D" parent="Gameplay/Scene"]
+position = Vector2(730, 1049)
+script = ExtResource("3_mtowm")
+
 [node name="Coffin" type="Node2D" parent="Gameplay/Scene"]
 position = Vector2(79, 42)
-script = ExtResource("3_e0oef")
 
 [node name="VentOff" type="Sprite2D" parent="Gameplay/Scene/Coffin"]
 position = Vector2(1694, 767)
