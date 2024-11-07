@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxso7csoc4xho"]
+
+[ext_resource type="Texture2D" uid="uid://djv1deh01m764" path="res://assets/tombstone.png" id="1_80q3g"]
+[ext_resource type="Script" path="res://tombstones/tombstone.gd" id="1_sbudq"]
+[ext_resource type="PackedScene" uid="uid://c424bw2cmssmj" path="res://scenes/dummyplugscene.tscn" id="2_a2j8b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou683"]
+size = Vector2(276, 418)
+
+[node name="Tombstone" type="Node2D"]
+script = ExtResource("1_sbudq")
+scene = ExtResource("2_a2j8b")
+
+[node name="Tombstone" type="Sprite2D" parent="."]
+texture = ExtResource("1_80q3g")
+
+[node name="ClickDetection" type="Area2D" parent="."]
+process_mode = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickDetection"]
+shape = SubResource("RectangleShape2D_ou683")
+debug_color = Color(0.564706, 0.431373, 0.905882, 0)
+
+[connection signal="input_event" from="ClickDetection" to="." method="_on_click_detection_input_event"]

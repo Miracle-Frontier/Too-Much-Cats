@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://lkotfpu7kyyf"]
+
+[ext_resource type="Texture2D" uid="uid://cotgav1d7o23n" path="res://scenes/lavalevel/assets/platform.png" id="1_rw4wl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0pd4"]
+size = Vector2(348, 44)
+
+[node name="Platform" type="StaticBody2D"]
+position = Vector2(26, 408)
+
+[node name="Platform" type="Sprite2D" parent="."]
+texture = ExtResource("1_rw4wl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_s0pd4")
+one_way_collision = true
+debug_color = Color(0, 0.6, 0.701961, 0)
