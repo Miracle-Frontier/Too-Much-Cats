@@ -1,5 +1,20 @@
 extends Node
 
+var game: Game: get = _get_game
+var saved_scene
+
+func switch_scene(switch_to_scene: Node):
+	saved_scene = get_tree().current_scene
+	get_node("/root/").remove_child(saved_scene)
+	get_node("/root/").add_child(switch_to_scene)
+	get_tree().current_scene = switch_to_scene
+func return_to_saved_scene(save_current=false):
+	if not save_current: get_tree().current_scene.queue_free()
+	get_tree().root.add_child(saved_scene)
+	get_tree().current_scene = saved_scene
+	
+
+
 func _ready():
 	if OS.has_feature("template"):
 		print_rich("[color=green][b]Running an exported build")
@@ -20,3 +35,12 @@ func _enable_vsync_mailbox():
 			DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 	else:
 		print_rich("[color=green][b]Vsync MAILBOX is enabled")
+
+var _game_scene = preload("res://Game.tscn")
+
+func _get_game() -> Game:
+	if (not game): 
+		print_rich("[color=red][b]GAME IS NOT INSTANTIATED!!! Instancing it now...")
+		game = _game_scene.instantiate()
+		saved_scene = game
+	return game

@@ -1,18 +1,19 @@
 extends Node2D
 
 class_name Game
-
 var coins = 0
 var lives = 3
 var difficulty = 0 : set = _on_difficulty_changed
 
 func _ready() -> void:
-	pass 
-
+	%HBoxContainer.visible = false
+	Autoload.game = self
+	pass
 func _process(delta: float) -> void:
 	pass
 
 func next():
+	#$Camera2D.enabled = true
 	var anim: AnimationPlayer = $AnimationPlayer
 	anim.play("next")
 	#$Tombstones.next()
@@ -27,6 +28,7 @@ func _tween_stuff():
 	tween.parallel().tween_property($Deco2,"scroll_offset",Vector2($Deco2.scroll_offset.x-70,$Deco2.scroll_offset.y),0.6)
 	tween.parallel().tween_property($Moon,"scroll_offset",Vector2($Moon.scroll_offset.x-30,$Moon.scroll_offset.y),0.6)
 func _on_difficulty_changed(val):
-	%RichTextLabel.visible = true
+	%HBoxContainer.visible = true
 	difficulty = int(val)
-	%RichTextLabel.text = str(difficulty)
+	%RichTextLabel.text = "[center]"+str(difficulty)
+	%RichTextLabel.custom_minimum_size.x = %RichTextLabel.get_content_width()
