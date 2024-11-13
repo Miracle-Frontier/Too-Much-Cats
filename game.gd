@@ -8,6 +8,7 @@ var difficulty = 0 : set = _on_difficulty_changed
 func _ready() -> void:
 	%HBoxContainer.visible = false
 	Autoload.game = self
+	$AudioStreamPlayer.play(randf_range(0,$AudioStreamPlayer.stream.get_length()-1))
 	pass
 func _process(delta: float) -> void:
 	pass
@@ -15,6 +16,7 @@ func _process(delta: float) -> void:
 func next():
 	#$Camera2D.enabled = true
 	var anim: AnimationPlayer = $AnimationPlayer
+	$AudioStreamPlayer.seek(randf_range(0,$AudioStreamPlayer.stream.get_length()-1))
 	anim.play("next")
 	#$Tombstones.next()
 	difficulty+=1

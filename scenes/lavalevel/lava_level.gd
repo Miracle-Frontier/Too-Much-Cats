@@ -1,11 +1,12 @@
 extends Node2D
 
-# PLATFORM 1 JUMP ONLY 
+# PLATFORM 2 JUMP ONLY 
 # BUY NEW DIFFICULTIES
 # TODO MOVING PLATFORMS
 # INCREASES CAMERA SHAKING  (LIMIT!!!!!!)
 # МУЗЫКА УСКОРЯЕТСЯ ( LIMIT!!!!!)
 # AMOUNT OF PLATFORMS
+# ЗВУКИ ВОЗДУХА ПРИ ПАДЕНИИ И ПОДЪЕМА
 var platform_scene = load("res://scenes/lavalevel/platform.tscn")
 
 var generation_height = 10000 # Total level height

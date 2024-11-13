@@ -12,8 +12,6 @@ func return_to_saved_scene(save_current=false):
 	if not save_current: get_tree().current_scene.queue_free()
 	get_tree().root.add_child(saved_scene)
 	get_tree().current_scene = saved_scene
-	
-
 
 func _ready():
 	if OS.has_feature("template"):

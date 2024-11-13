@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dluw1k4ytwdr2" path="res://assets/ground.png" id="4_albar"]
 [ext_resource type="Texture2D" uid="uid://dili1gwhflkou" path="res://assets/moon.png" id="5_kixgt"]
 [ext_resource type="Texture2D" uid="uid://dfveuokwxjd2s" path="res://assets/deco2.png" id="6_s8tgj"]
-[ext_resource type="AudioStream" uid="uid://chxurabs44m41" path="res://assets/mixkit-forest-at-night-1224.wav" id="8_j3wu0"]
 [ext_resource type="Texture2D" uid="uid://gyxgse4kqm8g" path="res://assets/lvl0_diff.png" id="8_p4png"]
+[ext_resource type="AudioStream" uid="uid://bdee5fhdbg2vg" path="res://assets/mixkit-scary-graveyard-wind-1157.wav" id="8_w0d66"]
 
 [sub_resource type="Animation" id="Animation_vh78h"]
 length = 0.001
@@ -147,8 +147,7 @@ libraries = {
 autoplay = "idle"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_j3wu0")
-autoplay = true
+stream = ExtResource("8_w0d66")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

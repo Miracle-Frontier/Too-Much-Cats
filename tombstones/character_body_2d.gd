@@ -13,6 +13,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += GRAVITY * delta * speed_y_modifier
 	else:
 		velocity.y = JUMP_VELOCITY * speed_y_modifier
+		$JumpSound.play()
 	direction.x = 0
 	if Input.is_action_pressed("right"): direction.x += 1
 	if Input.is_action_pressed("left"): direction.x -= 1
