@@ -33,7 +33,7 @@ texture = ExtResource("2_0c1h0")
 rotation = 3.13975
 scroll_scale = Vector2(0.4, 0.4)
 repeat_size = Vector2(2376, 1344)
-repeat_times = 3
+repeat_times = 4
 
 [node name="Stars" type="Sprite2D" parent="Parallax2D2"]
 modulate = Color(1, 1, 1, 0.403922)
@@ -64,5 +64,8 @@ position = Vector2(26, -321)
 
 [node name="Camera2D" type="Camera2D" parent="Hero"]
 position = Vector2(0, -42)
-limit_smoothed = true
-position_smoothing_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

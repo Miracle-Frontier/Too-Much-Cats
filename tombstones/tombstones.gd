@@ -1,12 +1,9 @@
 extends Node2D
 @export var tombstones: Array = [
-	"res://tombstones/tombstone_bird.tscn",
-	"res://tombstones/tombstone_hammer.tscn",
 	"res://tombstones/tombstone_lava.tscn"
 ]
 var current_tombstone: Tombstone = null
 var last_tombstone_spawn_position
-@onready var game: Game = get_tree().current_scene
 
 
 func _ready() -> void:

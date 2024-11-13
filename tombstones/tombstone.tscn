@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://djv1deh01m764" path="res://assets/tombstone.png" id="1_80q3g"]
 [ext_resource type="Script" path="res://tombstones/tombstone.gd" id="1_sbudq"]
-[ext_resource type="PackedScene" uid="uid://c424bw2cmssmj" path="res://scenes/dummyplugscene.tscn" id="2_a2j8b"]
+[ext_resource type="PackedScene" uid="uid://cprhywg82o4bt" path="res://scenes/dummyplugscene.tscn" id="2_a2j8b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ou683"]
 size = Vector2(276, 418)

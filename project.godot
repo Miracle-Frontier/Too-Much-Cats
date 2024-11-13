@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Autoload="*res://Autoload.gd"
+Autoload="*res://Autoload.tscn"
 
 [display]
 
